@@ -1,3 +1,16 @@
+"""
+Use this script to build a text file of a python based project directory. It will search nested directories. 
+
+You can use this to build a script so that if, say, you are working with a LLM and your context window is too large,
+then you can textify your project and start fresh in a new window with all of your latest code. 
+
+To run this use the command:
+   python textify-py-project.py --dir path/to/project --output path/to/output.txt 
+
+If you store a local db in your project, e.g., sqlite, you can add the flag --include-db which will take the first five
+rows. You do not need to include this if you have sensitve data and it will not read the contents of your .db file.
+"""
+
 import os
 import argparse
 import sqlite3
